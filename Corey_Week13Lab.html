@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3x3 Colored Button Grid</title>
+  <style>
+    body {
+background: linear-gradient(
+135deg,
+rgb(16, 68, 18),
+rgb(19, 86, 14),
+rgb(68, 148, 86),
+rgb(33, 98, 6),
+rgb(10, 58, 39)
+);
+background-size: 300% 350%;
+
+animation: gradient 10s ease infinite;
+height: 200vh;
+}
+
+@keyframes gradient {
+0% {
+background-position: 0% 50%;
+}
+50% {
+background-position: 100% 50%;
+}
+100% {
+background-position: 0% 50%;
+}
+}
+
+    /* Grid container: creates 3 equal columns */
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px; /* Space between rows and columns */
+      max-width: 600px;
+      margin: 40px auto;
+    }
+
+    /* Shared styling for all buttons */
+    .btn {
+      padding: 16px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    /* Individual button colors */
+    .btn-1 { background-color: #3fe639; cursor: vertical-text;} /* Red */
+    .btn-2 { background-color: #f4a261; cursor: vertical-text;} /* Orange */
+    .btn-3 { background-color: #e9c46a; color: #222; cursor: vertical-text;} /* Yellow with dark text */
+    .btn-4 { background: linear-gradient(135deg, rgb(42, 157, 143), rgb(10, 58, 39)); background-size: 300% 350%; animation: gradient 1s ease infinite; color: #ecf1ec; cursor: crosshair; } /* rainbow */
+    .btn-5 { background-color: #457b9d; cursor: grabbing;} /* Steel Blue */
+    .btn-6 { background-color: #1d3557; color: #f6ee00; cursor: n-resize;} /* Navy */
+    .btn-7 { background-color: #8338ec; cursor: ne-resize;} /* Purple */
+    .btn-8 {  background: linear-gradient(135deg, rgb(181, 24, 24), rgb(85, 35, 81)); background-size: 300% 350%; animation: gradient 1s ease infinite; color: #ecf1ec; cursor: crosshair; } /* rainbow */
+    .btn-9 { background-color: #38b000; } /* Green */
+    .btn-10 { background-color: #ffbe0b; color: #222; } /* Bright Yellow with dark text */
+    .btn-11 { background-color: #fb5607; } /* Orange Red */
+    .btn-12 {  background: linear-gradient(135deg, rgb(176, 40, 181), rgb(63, 5, 71)); background-size: 300% 350%; animation: gradient 1s ease infinite; color: #ecf1ec; cursor: crosshair; } /* rainbow */
+    .btn-13 { background-color: #3a186b; cursor: wait;} /* Purple */
+    .btn-14 { background-color: #3a86ff; color: #0f3611; } /* Blue */
+    .btn-15 { background-color: #ff006e; cursor: vertical-text;} /* Pink */
+    .btn-16 {  background: linear-gradient(135deg, rgb(190, 188, 37), rgb(44, 195, 24)); background-size: 300% 350%; animation: gradient 1s ease infinite; color: #ecf1ec; cursor: crosshair; } /* rainbow */
+    .btn-17 { background-color: #3fe639; cursor: grabbing; } /* Red */
+    .btn-18 { background-color: #f4a261; cursor: grab;} /* Orange */
+    .btn-19 { background-color: #e9c46a; color: #222; cursor: zoom-in;} /* Yellow with dark text */
+    .btn-20 {  background: linear-gradient(135deg, rgb(130, 145, 135), rgb(216, 12, 223)); background-size: 300% 350%; animation: gradient 1s ease infinite; color: #ecf1ec; cursor: cell; } /* rainbow */
+  </style>
+</head>
+<body>
+
+  <div class="button-grid">
+    <!-- Row 1 -->
+    <button class="btn btn-1">Home</button>
+    <button class="btn btn-2">Profile</button>
+    <button class="btn btn-3">Messages</button>
+    <button class="btn btn-4">My Favorite Button</button>
+
+    <!-- Row 2 -->
+    <button class="btn btn-5">Settings</button>
+    <button class="btn btn-6">Analytics</button>
+    <button class="btn btn-7">Reports</button>
+    <button class="btn btn-8">My Second Favorite Button</button>
+
+    <!-- Row 3 -->
+    <button class="btn btn-9">Billing</button>
+    <button class="btn btn-10">Support</button>
+    <button class="btn btn-11">Log Out</button>
+    <button class="btn btn-12">My Third Favorite Button</button>
+
+    <!-- Row 4 -->
+    <button class="btn btn-13">Emoji Room 😃</button>
+    <button class="btn btn-14">Notifications</button>
+    <button class="btn btn-15">Help</button>
+    <button class="btn btn-16">My Fourth Favorite Button</button>
+
+    <!-- Row 5 -->
+    <button class="btn btn-17">Complaints</button>
+    <button class="btn btn-18">Complaints But Orange</button>
+    <button class="btn btn-19">About</button>
+    <button class="btn btn-20">My Fifth Favorite Button</button>
+  </div>
+
+    <p>
+Slider <input id="time" type="range" min="10" max="2000" value="350">
+    </p>
+
+</body>
+</html>
